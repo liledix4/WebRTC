@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peer-to-Peer Test</title>
+    <link rel="stylesheet" href="gears/p2p/p2p.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- https://github.com/davidshimjs/qrcodejs  -->
+        <script src="gears/qrcode.min.js"></script>
+    <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+    <script src="gears/p2p/p2p.js" type="module"></script>
+</head>
+<body>
+<!-- Enter Player ID manually -->
+<input type="text" id="player-id" placeholder="Scan QR or enter Player ID here">
+<button id="player-find">Find the player</button>
+<button id="send-message">Send the message!</button>
+<hr>
+<!-- Generate QR code -->
+<code id="my-player-id">Loading...</code>
+<div id="qrcode"></div>
+<hr>
+<!-- Scan QR code -->
+<video id="scan-qr" style="max-width: 100%; width: 400px;"></video>
+<p><button id="scan-again" style="display: none;">Scan again?</button></p>
+<hr>
+<!-- Import QR code -->
+<p><input type="file" id="file-selector"></p>
+</body>
+</html>
